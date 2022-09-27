@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    for(int n=1;n<2000;n++){
-    if(n%8==6&&n%9==7&&n%15==13){
-    printf("\n²{¦bn: %d\n",n);
-    printf("¥Î8°£¾l%d\n",n%8);
-    printf("¥Î9°£¾l%d\n",n%9);
-    printf("¥Î15°£¾l%d\n",n%15);
-    }
+    for(int n=1; n<2000; n++)
+    {
+        if( n%8==6  &&n%9==7&&n%15==13)
+        {
+            printf("\nç¾åœ¨n: %d\n",n);
+            printf("ç”¨8é™¤é¤˜%d\n",n%8);
+            printf("ç”¨9é™¤é¤˜%d\n",n%9);
+            printf("ç”¨15é™¤é¤˜%d\n",n%15);
+        }
     }
 }
