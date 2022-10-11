@@ -1,6 +1,5 @@
 # 2022cce
 ## 第六周作業
-共四份
 ### 第六周第一份作業(畫星星)
 ```cpp
 #include <stdio.h>
@@ -13,6 +12,7 @@ int main()
         printf("i:%d¬P¬P\n",a);
     }
 }
+```
 第六周第二份作業(畫金字塔)
 ```cpp
 #include <stdio.h>
@@ -26,6 +26,7 @@ int main()
         printf("\n");
     }
 }
+```
 第六周第三份作業(求最大公因數)
 ```cpp
 ///試試看全部數看能否整除
@@ -44,6 +45,7 @@ int main()
     }
     printf("ans: %d 可約分",ans);
 }
+```
 ### 第六周第四份作業(求最大公因數-輾轉乘除法)
 ```cpp
 #include <stdio.h>
