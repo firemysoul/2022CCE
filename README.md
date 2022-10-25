@@ -163,8 +163,8 @@ int main()
 
 }
 ```
-###第八周作業
-##第八周第一份作業(暴力質數判別)
+## 第八周作業
+第八周第一份作業(暴力質數判別)
 ```cpp
 
 #include <stdio.h>
@@ -182,7 +182,7 @@ int main()
     else printf("%d 不好，不是質數",n);
 }
 ```
-##第八周第二份作業(列出質數)
+第八周第二份作業(列出質數)
 #include <stdio.h>
 ```cpp
 int main()
@@ -200,7 +200,7 @@ int main()
 	}
 }
 ```
-##第八周第三份作業(加總平均)
+第八周第三份作業(加總平均)
 #include <stdio.h>
 ```cpp
 int main()
@@ -216,7 +216,7 @@ int main()
     printf("總和是:%d",sum );
 }
 ```
-##第八周第四份作業(印出直角三角形)
+第八周第四份作業(印出直角三角形)
 ```cpp
 #include <stdio.h>
 
@@ -232,7 +232,7 @@ int main()
     }
 }
 ```
-##第八周第五份作業(2for印出直角三角形)
+第八周第五份作業(2for印出直角三角形)
 ```cpp
 #include <stdio.h>
 
@@ -249,7 +249,7 @@ int main()
     }
 }
 ```
-##第八周第六份作業(2while印出直角三角形)
+第八周第六份作業(2while印出直角三角形)
 ```cpp
 #include <stdio.h>
 
