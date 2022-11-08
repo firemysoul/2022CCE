@@ -274,3 +274,45 @@ int  main()
 	}
 }
 ```
+## 第十周作業
+第十周第一份作業(認識陣列)
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[4] = {10,20,30,40};///4個盒子
+
+    for(int i=0;i<4;i++){
+            printf("a[%d] = %d \n",i,a[i]);
+    }
+}
+```
+第十周第二份作業(分析陣列)
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[4];///宣告有四格 a[0] a[1] a[2] a[3]
+    printf("a[0] : %d\n",a[0] );///把a[0]拿來用(出現亂碼)
+
+    a[0] =33;///在a[0]裡放33
+    printf("a[0] : %d\n",a[0] );///把a[0]拿來用
+}
+```
+第十周第三份作業(陣正反印印)
+```cpp
+#include <stdio.h>///測試列引法
+
+int main()
+{
+    int a[4] = { 10, 20, 30, 40 };
+    for(int i=0; i<4; i++){
+        printf("%d ", a[i] );
+    }
+    printf("上面正著印，下面倒著印\n");
+    for(int i=3; i>=0; i--){
+        printf("%d ",a[i]);
+    }
+}
+```
