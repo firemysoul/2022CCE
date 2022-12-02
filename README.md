@@ -316,3 +316,404 @@ int main()
     }
 }
 ```
+##第十週實習課
+陣列資料反轉
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[30];
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	for(int i=n-1;i>=0;i--){
+		printf("%d\n",a[i]);
+	}
+}
+```
+找出高分與低分
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[n];
+	printf("\n");
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	for(int i=0;i<n;i++){
+		if (a[i]>=80)
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	for(int i=0;i<n;i++){
+		if (a[i]<40)
+		printf("%d ",a[i]);
+	}
+}
+```
+及格與不及格
+```
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[n];
+	printf("\n");
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	for(int i=0;i<n;i++){
+		if (a[i]>=80)
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	for(int i=0;i<n;i++){
+		if (a[i]<40)
+		printf("%d ",a[i]);
+	}
+}
+```
+```cpp
+array-輸入12個月的平均溫度，計算年均溫
+#include <stdio.h>
+
+int main()
+{
+	float a[12];
+	float sum=0,avg;
+	for(int i=0;i<12;i++){
+		printf("%d月的平均溫度:",i+1);
+		scanf("%f",&a[i]);
+	}
+	printf("===================\n");
+	for(int i=0;i<12;i++){
+	sum+=a[i];
+	}
+	avg=sum/12;
+	printf("年平均溫度為:%f",avg);
+}
+```
+##第十一週實習課
+股票最佳買點與賣點
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[30],n;
+	scanf(" %d",&n);
+	int buy,sale,ans=0,i,j;
+	for(i=0;i<n;i++)
+	{
+		scanf(" %d", &a[i]);
+	}
+	for(i=0; i<(n-1); i++)
+	{
+		for(j=i+1; j<n; j++)
+		{
+			if((a[j]-a[i])>ans)
+			{
+				buy=a[i];
+				sale=a[j];
+				ans=a[j]-a[i];			
+			}
+		}
+	}
+	printf("請按任意鍵繼續 . . . \n");
+	printf("最大利潤=%d-%d=%d\n",sale,buy,sale-buy);
+}
+```
+矩陣順時針旋轉
+```cpp
+#include <stdio.h>
+
+int main()
+{	
+	int a[30][30], m, n;
+	scanf(" %d %d",&m, &n);
+	printf("\n");
+	for(int i=0; i<m; i++)
+	{
+		for(int k=0; k<n; k++)
+		{
+			scanf(" %d",&a[i][k]);
+		}
+	}
+	for(int i=0;i<n;i++)
+	{
+		for(int k=0; k<m; k++)
+		{
+		printf("%2d ",a[m-k-1][i]);
+		}
+		printf("\n");
+	}
+
+}
+```
+矩陣乘法
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[10][10],b[10][10],c[10][10];
+	int i,j,k,n;
+	scanf("%d",&n);
+	for(i=0; i<n;i++)
+	{
+		for(j=0; j<n; j++)
+		{
+			scanf(" %d",&a[i][j]);
+		}
+	}
+		for(i=0; i<n;i++)
+	{
+		for(j=0; j<n; j++)
+		{
+			scanf(" %d",&b[i][j]);
+		}
+	}
+	for(i=0; i<n;i++)
+	{
+		for(j=0; j<n; j++)
+		{
+			c[i][j]=0;
+			for(k=0; k<n; k++)
+			{
+				c[i][j]+=a[i][k]*b[k][j];
+			}
+		}
+	}
+	for(i=0; i<n;i++)
+	{
+		for(j=0; j<n; j++)
+		{
+			printf("%3d ",c[i][j]);
+		}
+		printf("\n");
+	}
+}
+```
+##第十二週實習課
+均標人數
+```cpp
+#include <stdio.h>
+int a[20];
+int main()
+{
+	int i, j, sum=0,high=0;
+	float avg;
+	for(i=0;;i++)
+	{
+		scanf("%d",&a[i]);
+		if(a[i]<0){break;}
+		if(a[i]>=100)i--;
+	}	
+	j=i;
+	for(i=0; i<j; i++)
+	{
+		sum+=a[i];
+	}
+	avg=(float)sum/j;
+	for(i=0; i<j; i++)
+	{
+		if(a[i]>=avg)
+		high++;
+	}
+	printf("%.2f %d", avg, high);
+}
+```
+均標與前標計算 
+```cpp
+#include <stdio.h>
+int a[100];
+int main()
+{
+	int n, i , j=0, sum=0, sumo=0;
+	float b, B=0;
+	scanf("%d", &n);
+	for(i=0; i<n; i++)
+	{
+		scanf("%d",&a[i]);
+		sum+=a[i];
+	}
+	b=(float)sum/n;
+	for(i=0; i<n; i++)
+	{
+		if(a[i]>=b)
+		{
+			sumo+=a[i];
+			j++;
+		}
+	}
+	B=(float)sumo/j;
+	printf("均標:%.1f\n",b);
+	printf("前標:%.1f\n",B);
+	
+	
+}
+```
+Fibonacci 第3i項
+```cpp
+#include <stdio.h>
+int a[51];
+int main()
+{
+	int n,i;
+	scanf("%d", &n);
+	for(i=0; i<n;i++)
+	{
+		a[0]=0,a[1]=1;
+		a[i+2]=a[i+1]+a[i];
+	}
+	for(i=0; i<n; i++)
+	{
+		if(i%3==0)printf("%d ",a[i]);
+	}
+}
+```
+[Array] Sorting
+```cpp
+#include <stdio.h>
+int a[10];
+int main()
+{
+	int temp;
+	for(int i=0; i<10; i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(int j=0; j<10; j++)
+	{
+		for(int i=0; i<10; i++)
+		{
+			if(a[i]>a[i+1])
+			{
+				temp=a[i];
+				a[i]=a[i+1];
+				a[i+1]=temp;
+			}
+		}
+	}
+	printf("輸入10個整數：由小到大排序：");
+	for(int i=0; i<11; i++)
+	{
+		if(a[i]!=0)printf("%d ",a[i]);
+	}
+	printf("\n");
+}
+```
+##第十三週實習課作業
+計算1到10的整數平方
+```cpp
+#include <stdio.h>
+int square(int n)
+{
+	return n*n;
+}
+int main()
+{
+	for(int i=1; i<=10;i++)
+	{
+		printf("%d ",square(i));
+	}
+	printf("\n");
+}
+```
+function-兩數平方和
+```cpp
+/*兩個平方和相加*/
+#include <stdio.h>
+int fuction(int a, int b)
+{
+	return a*a+b*b;
+}
+int main()
+{
+	int i, k;
+	scanf("%d%d", &i, &k);
+	printf("兩個平方和相加:%d",fuction(i,k));
+}
+```
+函式-三角形列印
+```cpp
+#include <stdio.h>
+void fuction(int n)
+{
+	for(int i=0; i<n; i++)
+	{
+		for(int j=0; j<i; j++)
+		{
+			printf(" ");
+		}
+		for(int j=n; j>i; j--)
+		{
+			printf("%d",j);
+		}
+		printf("\n");
+	}
+	
+}
+int main()
+{
+	int f;
+	printf("請輸入一個數:");
+	scanf("%d",&f);
+	fuction(f);
+
+}
+```
+Function-反轉數字
+```cpp
+#include <stdio.h>
+int fun(int n)
+{
+	if(n<1|| n>9999)
+	return 0;
+	else
+	{
+		int ans=0;
+		while(n>1)
+		{
+			ans=ans*10+n%10;
+			n=n/10;
+		}
+		return ans;
+	}
+}
+int main()
+{
+	int x;
+	scanf("%d",&x);
+	printf("請在1到9999輸入一個數字:數字反轉為:%d\n",fun(x));
+}
+```
+##程式廣場(較特別題目)
+字母頻率
+```cpp
+#include <stdio.h>
+int ans[256];
+int main()
+{
+	char c;
+	while(scanf("%c",&c)==1)
+	{
+		ans[c]++;
+	}
+	for(int c='A'; c<='Z'; c++)
+	{
+		if(ans[c]>0) printf("%c:%d\n",c,ans[c]);
+	}
+	for(int c='a'; c<='z'; c++)
+	{
+		if(ans[c]>0) printf("%c:%d\n",c,ans[c]);
+	}
+}
+```
