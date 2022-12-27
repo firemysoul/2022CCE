@@ -1,4 +1,3 @@
-///Selection Sort
 #include <stdio.h>
 int a[10]={1 ,2 ,3 ,10 ,9 ,8 ,7 ,6 ,5 ,4};
 int main()
@@ -7,7 +6,7 @@ int main()
     {
         for(int j=0; j<10; j++)
         {
-            if(a[i]>a[j])
+            if(a[i]<a[j])
             {
                 int temp=a[i];
                 a[i]=a[j];
