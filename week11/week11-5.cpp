@@ -7,7 +7,7 @@ int main()
         {
         for(int i = 0; i<10-1; i++)
         {
-            if( a[i] > a[i-1] )
+            if( a[i] > a[i+1] )
             {
                 int temp = a[i];
                 a[i] = a[i+1];
