@@ -5,16 +5,16 @@ int main()
     char c;
     char line[31];
 
-    printf("½Ğ¿é¤J¤@­Ó¦r¦ê,¤£­n¤Óªø: ");
+    printf("è«‹è¼¸å…¥ä¸€å€‹å­—ä¸²,ä¸è¦å¤ªé•·: ");
     scanf("%s", line);
-    printf("§A¿é¤J: %s\n", line);
+    printf("ä½ è¼¸å…¥: %s\n", line);
 
     int N = strlen(line);
     for(int i=0; i<N; i++)
     {
         if(line[i]=='2')
-            {
-                printf("§ä¨ì2\n");
-            }
+        {
+                printf("æ‰¾åˆ°2\n");
+        }
     }
 }
